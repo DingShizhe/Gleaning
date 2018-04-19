@@ -10,6 +10,13 @@ function gen_dir {
     done
 }
 
+echo "% macros" > ./src/macros.tex
+printf "\\def \\BuildDir {${des_dir%/}}\n" > ./src/macros.tex
+
+if [[ ! -d $des_dir ]]; then
+    mkdir $des_dir
+fi
+
 for dir_f in `ls $src_dir`; do
     # echo $dir_f
     if [[ -d $src_dir$dir_f ]]; then
