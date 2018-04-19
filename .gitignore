@@ -1,0 +1,9 @@
+/*
+!.gitignore
+!Makefile
+!gen.py
+!gen.sh
+!clean.sh
+!README.md
+!main.tex
+!/src/

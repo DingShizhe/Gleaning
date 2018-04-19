@@ -1,0 +1,157 @@
+\documentclass[a5paper, 12pt]{book}
+
+\usepackage{xeCJK, geometry, fancyhdr, titlesec}
+
+\usepackage[
+    CJKbookmarks=true,
+    bookmarks=true,
+    linktocpage=true,
+    hyperindex=true,
+    bookmarks=true
+]{hyperref}
+
+\hypersetup{%
+    pdfborderstyle={/S/U/W 0.5}% border style will be underline of width 1pt
+}
+
+
+\usepackage[svgnames]{xcolor}
+
+\geometry {
+    a5paper,
+    scale=0.8,
+    left=2cm,
+    right=2cm,
+    top=2.5cm,
+    bottom=2.8cm
+}
+
+\newcommand{\htoday}{
+    \href{https://github.com/DingShizhe}{\today}
+    }
+
+\usepackage{draftwatermark}
+\SetWatermarkText{\htoday}
+\SetWatermarkLightness{0.97}
+
+\fancyfoot[CO,RE]{}
+
+\newcommand*{\plogo}{\fbox{$\mathcal{DS}$}}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\renewcommand{\contentsname}{\TitleKai{目录}}
+
+\setcounter{secnumdepth}{0}
+
+\xeCJKDeclareSubCJKBlock{Punct}{
+    `，,`。,`？
+}
+\xeCJKDeclareSubCJKBlock{Quezi}{
+    `鹢,`櫂,`袸
+}
+\setCJKmainfont[
+%    ItalicFont={方正楷体简体},
+%    ItalicFont={AR PL UKai CN},
+    BoldFont={FandolHei},
+%    BoldFont=方正黑体简体,
+%    Quezi=AR PL UKai TW
+]{楷体_GB2312}
+
+\setCJKfamilyfont{TitleKai}{FandolKai}
+\newcommand{\TitleKai}{\CJKfamily{TitleKai}}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[ER]{\leftmark}
+\fancyhead[OL]{\rightmark}
+\fancyhead[EL,OR]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\fancypagestyle{plain}{%
+    \fancyhf{}
+    \fancyfoot[C]{\bfseries \thepage}
+    \renewcommand{\headrulewidth}{0pt}
+    \renewcommand{\footrulewidth}{0pt}
+} 
+\newcommand{\Xiang}{\href{https://github.com/DingShizhe}{Xiang}}
+\newcommand\myquotepage[3]{\thispagestyle{empty}\vspace*{\fill}\vspace*{\fill}\textcolor{#1}{\textit{#2\\\rightline{#3}}}\vspace*{\fill}\vspace*{\fill}\vspace*{\fill}}
+
+\begin{document}
+    \setlength{\parindent}{0pt}
+    \setlength{\baselineskip}{20pt}
+
+\begin{titlepage}
+	\raggedleft
+	\rule{1pt}{\textheight} % vertical line
+	\hspace{0.05\textwidth}
+	\parbox[b]{0.80\textwidth}{
+		\scalebox{1.2}{\it\Huge\TitleKai 拾穗}\\[2\baselineskip] % Title
+		\textcolor{Sienna}{\large\TitleKai{和光同尘}}\\[4\baselineskip]
+		{\Large\textsc{\Xiang}}
+        
+		\vspace{0.5\textheight}	
+		\color{Sienna}{\noindent \TitleKai 且慢~~\plogo}\\[\baselineskip]
+	}
+    
+\end{titlepage}
+
+%----------------------------------------------------------------------------------------
+
+
+\myquotepage{Sienna}{年轻的时候，我想成为任何人，除了我自己。}{ ——电影《玛丽和马克思》}
+
+
+\pagestyle{plain} 
+
+\tableofcontents
+
+\setcounter{page}{1}
+
+\newpage
+
+\mainmatter
+
+\pagestyle{fancy} 
+
+\part{大多是诗}
+    \input{./诗/2016.1.5-毕赣.tex}
+    
+    \myquotepage{Sienna}{蒹葭苍苍，白露为霜。所谓伊人，在水一方。}{ ——《诗经·秦风》}\newpage
+    \input{./诗/镜中-张枣.tex}
+    
+    \input{./诗/穿越大半个中国去睡你-余秀华.tex}
+    \input{./诗/我爱你-余秀华.tex}
+    \input{./诗/涉江采芙蓉-佚名.tex}
+    \input{./诗/风从田野上吹过-余秀华.tex}
+    \input{./诗/雨霖铃-柳永.tex}
+    \input{./诗/写给门前的一棵树-余秀华.tex}
+    \input{./诗/少年游-周邦彦.tex}
+    \input{./诗/真的-北岛.tex}
+    \input{./诗/送别-王维.tex}
+    \input{./诗/错误-郑愁予.tex}
+    \input{./诗/春思-李白.tex}
+    \input{./诗/十二月十九夜-废名.tex}
+    \input{./诗/晚晴-李商隐.tex}
+    
+    \myquotepage{Sienna}{生年不满百，常怀千岁忧。昼短苦夜长，何不秉烛游？}{ ——《古诗十九首·生年不满百》}\newpage
+    \input{./诗/春夜宴从弟桃花园序-李白.tex}
+    
+    \myquotepage{Sienna}{若士必怒，伏尸二人，流血五步，天下缟素。}{ ——《战国策·魏策四·唐雎不辱使命》}\newpage
+    
+    \input{./诗/采莲赋-萧铎.tex}
+    \input{./诗/洛神赋-曹植.tex}
+    \input{./诗/野望-王绩.tex}
+    \input{./诗/送杜少府之任蜀州-王勃.tex}
+    \input{./诗/望岳-杜甫.tex}
+    
+    \input{./诗/乐游原-李商隐.tex}
+    \input{./诗/旅夜书怀-杜甫.tex}
+    \input{./诗/春夜喜雨-杜甫.tex}
+    \myquotepage{Sienna}{岁寒，然后知松柏之后凋也。}{——《论语·子罕》}\newpage
+    \input{./诗/送别-李叔同.tex}
+    \myquotepage{Sienna}{问余何适,廓尔忘言,华枝春满,天心月圆。}{——李叔同}\newpage
+    
+    \myquotepage{Sienna}{人生不相见，动如参与商。
+        今夕复何夕，共此灯烛光。}{——杜甫《赠卫八处士》}
+    
+\end{document}
