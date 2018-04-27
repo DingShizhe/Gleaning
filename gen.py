@@ -47,6 +47,8 @@ with open(src_fp, 'r') as src_f:
                 line = line.strip()
                 if len(line) == 0:
                     continue
+                elif line[0] == '"':    # comment
+                    continue
                 elif state == 0:
                     print('\\myquotepage{Sienna}{', line, '}', file=des_f)
                     state = 1
