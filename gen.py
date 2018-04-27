@@ -26,6 +26,8 @@ with open(src_fp, 'r') as src_f:
                 line = line.strip()
                 if len(line) == 0:
                     print('', file=des_f)
+                    if state == 2:  # blank line in verse content
+                        print('\\vspace{-0.4cm}', file=des_f)
                     continue
 
                 if state == 0:
@@ -33,8 +35,8 @@ with open(src_fp, 'r') as src_f:
                     state = 1 # Author
                 elif state == 1:
                     print(line, '\\\\', file=des_f)
-                    print('\\vspace{-0.4cm}', file=des_f)
-                    state = 2
+                    # print('\\vspace{-0.4cm}', file=des_f)
+                    state = 2 # verse content
                 else:
                     print(line, '\\\\', file=des_f)
 
