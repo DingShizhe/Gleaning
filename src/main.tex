@@ -45,19 +45,42 @@
 \setcounter{secnumdepth}{0}
 
 \xeCJKDeclareSubCJKBlock{Punct}{
-    `，,`。,`？
+    `，,
+    `。,
+    `？,
+    `—,
+    `！,
+    `、,
+    `；,
+    `：,
+    `《,
+    `》,
+    `〈,
+    `〉,
+    `…,
+    `～,
+    `「,
+    `」,
+    `『,
+    `』,
+    `〔,
+    `〕,
+    `“,
+    `”,
+    `‘,
+    `’
 }
-\xeCJKDeclareSubCJKBlock{Quezi}{
-    `鹢,`櫂,`袸
-}
+
 \setCJKmainfont[
-%    ItalicFont={方正楷体简体},
-%    ItalicFont={AR PL UKai CN},
-    % BoldFont={FandolHei},
+    BoldFont={FandolHei},
+   % BoldFont=方正大标宋_GBK,
+   % BoldFont=Microsoft YaHei,
    % BoldFont=方正黑体_GBK,
-%    Quezi=AR PL UKai TW
+   % BoldFont=方正报宋_GBK,
+   Punct=方正楷体_GBK
 % ]{方正楷体_GBK}
-]{DFKai-SB}
+% ]{DFKai-SB}
+]{HYKaiTiS}
 
 \setCJKfamilyfont{TitleKai}{FandolKai}
 \newcommand{\TitleKai}{\CJKfamily{TitleKai}}
@@ -77,8 +100,6 @@
 \newcommand{\Xiang}{\href{https://github.com/DingShizhe}{Xiang}}
 \newcommand\myquotepage[3]{\thispagestyle{empty}\vspace*{\fill}\vspace*{\fill}\textcolor{#1}{\textit{#2\\\rightline{#3}}}\vspace*{\fill}\vspace*{\fill}\vspace*{\fill}}
 
-
-% \input{./src/macros.tex} % absolutely path
 
 \begin{document}
     \setlength{\parindent}{0pt}
@@ -116,35 +137,20 @@
 
 \pagestyle{fancy} 
 
-\chapter{大多是诗}
+\chapter{诗}
 \newpage
-
-    \input{./build/诗/2016.1.5-毕赣.tex}
     
     \input{./build/句/2-蒹葭苍苍，白露为霜。所谓伊人，在水一方。.tex}
-    \input{./build/诗/镜中-张枣.tex}
     
-    \input{./build/诗/穿越大半个中国去睡你-余秀华.tex}
-    \input{./build/诗/我爱你-余秀华.tex}
     \input{./build/诗/涉江采芙蓉-佚名.tex}
-    \input{./build/诗/风从田野上吹过-余秀华.tex}
-    \input{./build/诗/雨霖铃-柳永.tex}
-    \input{./build/诗/写给门前的一棵树-余秀华.tex}
-    \input{./build/诗/少年游-周邦彦.tex}
-    \input{./build/诗/真的-北岛.tex}
     \input{./build/诗/送别-王维.tex}
-    \input{./build/诗/错误-郑愁予.tex}
     \input{./build/诗/春思-李白.tex}
-    \input{./build/诗/十二月十九夜-废名.tex}
     \input{./build/诗/晚晴-李商隐.tex}
     
     \input{./build/句/3-生年不满百，常怀千岁忧。昼短苦夜长，何不秉烛游？.tex}
-    \input{./build/诗/春夜宴从弟桃花园序-李白.tex}
     
     \input{./build/句/4-若士必怒，伏尸二人，流血五步，天下缟素。.tex}
     
-    \input{./build/诗/采莲赋-萧铎.tex}
-    \input{./build/诗/洛神赋-曹植.tex}
     \input{./build/诗/野望-王绩.tex}
     \input{./build/诗/送杜少府之任蜀州-王勃.tex}
     \input{./build/诗/望岳-杜甫.tex}
@@ -155,12 +161,9 @@
     \input{./build/诗/春夜喜雨-杜甫.tex}
 
     \input{./build/句/5-岁寒，然后知松柏之后凋也。.tex}
-    \input{./build/句/6-问余何适，廓尔忘言，华枝春满，天心月圆。.tex}
-    \input{./build/诗/送别-李叔同.tex}
     
     \input{./build/句/7-人生不相见，动如参与商。今夕复何夕，共此灯烛光。.tex}
     
-    \input{./build/诗/爱莲说-周敦颐.tex}
 
     \input{./build/诗/杂诗三首其二-王维.tex}
 
@@ -170,31 +173,16 @@
 
     \input{./build/诗/红豆-王维.tex}
 
-    \input{./build/诗/与朱元思书-吴均.tex}
 
-    \input{./build/句/8-一弹戏牡丹，一挥万重山。.tex}
-    \input{./build/诗/苏幕遮·燎沉香-周邦彦.tex}
     \input{./build/句/10-我们自古以来，就有埋头苦干的人，有拼命硬干的人.tex}
 
     \input{./build/句/11-在秋风鲈鱼之前，尚有薄酒一樽。.tex}
 
     \input{./build/诗/渡汉江-宋之问.tex}
-    \input{./build/诗/望江南·超然台作-苏轼.tex}
     \input{./build/诗/问刘十九-白居易.tex}
     
-
-    \input{./build/诗/浣溪沙·细雨斜风作晓寒-苏轼.tex}
-
-    \input{./build/诗/蝶恋花·春景-苏轼.tex}
-
     \input{./build/句/12-即便我身处果壳之中，仍自以为是无限宇宙之王。.tex}
 
-    \input{./build/诗/鹊桥仙·纤云弄巧-秦观.tex}
-
-    \input{./build/诗/八声甘州·对潇潇暮雨洒江天-柳永.tex}
-    \input{./build/诗/青玉案·元夕-辛弃疾.tex}
-
-    \input{./build/诗/临江仙·梦后楼台高锁-晏几道.tex}
     \input{./build/句/13-长太息以掩涕兮，哀民生之多艰！.tex}
 
     \input{./build/诗/悯农二首-李绅.tex}
@@ -205,7 +193,6 @@
     \input{./build/诗/陶者-梅尧臣.tex}
     \input{./build/诗/氓-佚名-诗经.tex}
 
-    \input{./build/诗/山一程·长相思-纳兰性德.tex}
 
     \input{./build/句/14-滚滚长江东逝水，浪花淘尽英雄。.tex}
     % \input{./build/诗/历史的天空-王健.tex}
@@ -216,15 +203,71 @@
 
     \input{./build/诗/苕之华-佚名-诗经.tex}
 
-    \input{./build/句/15-我和世界皆不完美。.tex}
+    \input{./build/诗/赠从兄襄阳少府皓-李白.tex}
+
+    \input{./build/句/19-子在川上曰：逝者如斯夫。.tex}
 
 
     \input{./build/诗/梦游天姥吟留别-李白.tex}
 
+    \input{./build/句/21-三军可夺帅也，匹夫不可夺志也。.tex}
+
+
+\chapter{词}
+    \newpage
+    \input{./build/句/8-一弹戏牡丹，一挥万重山。.tex}
+    
+    \input{./build/诗/浣溪沙·细雨斜风作晓寒-苏轼.tex}
+    \input{./build/诗/念奴娇·赤壁怀古-苏轼.tex}
+    \input{./build/诗/蝶恋花·春景-苏轼.tex}
+    \input{./build/诗/鹊桥仙·纤云弄巧-秦观.tex}
+    \input{./build/诗/雨霖铃-柳永.tex}
+    \input{./build/诗/少年游-周邦彦.tex}
+
+    \input{./build/诗/八声甘州·对潇潇暮雨洒江天-柳永.tex}
+    \input{./build/诗/青玉案·元夕-辛弃疾.tex}
+    \input{./build/诗/山一程·长相思-纳兰性德.tex}
+    \input{./build/诗/苏幕遮·燎沉香-周邦彦.tex}
+    \input{./build/诗/望江南·超然台作-苏轼.tex}
+    \input{./build/诗/临江仙·梦后楼台高锁-晏几道.tex}
+
+\chapter{现代诗}
+    \newpage
+    \input{./build/句/15-我和世界皆不完美。.tex}
+    \input{./build/诗/2016.1.5-毕赣.tex}
+
+    \input{./build/诗/风从田野上吹过-余秀华.tex}
+    \input{./build/诗/镜中-张枣.tex}
+    \input{./build/诗/写给门前的一棵树-余秀华.tex}
+
+    \input{./build/诗/送别-李叔同.tex}
+    \input{./build/句/6-问余何适，廓尔忘言，华枝春满，天心月圆。.tex}
+    \input{./build/诗/真的-北岛.tex}
+    \input{./build/诗/穿越大半个中国去睡你-余秀华.tex}
+    \input{./build/诗/错误-郑愁予.tex}
+    \input{./build/诗/我爱你-余秀华.tex}
+    \input{./build/诗/十二月十九夜-废名.tex}
+
+    \input{./build/句/23-酒入愁肠，七分酿成月光。余下的三分呼为剑气，绣口一吐便是半个盛唐。.tex}
+
+    \input{./build/诗/飞将军-余光中.tex}
+
+\chapter{文}
+    \newpage
+
+    \input{./build/句/22-臣本布衣，躬耕于南阳。.tex}
+
+    \input{./build/诗/与朱元思书-吴均.tex}
+
+    \input{./build/诗/采莲赋-萧铎.tex}
+
+    \input{./build/诗/洛神赋-曹植.tex}
+
+    \input{./build/诗/春夜宴从弟桃花园序-李白.tex}
+    \input{./build/诗/爱莲说-周敦颐.tex}
+
+    \input{./build/句/20-人固有一死，或重于泰山，或轻于鸿毛。.tex}
+
     \input{./build/句/18-孔子曰：何陋之有？.tex}
-
-    \input{./build/诗/赠从兄襄阳少府皓-李白.tex}
-
-    \input{./build/句/19-子在川上曰：逝者如斯夫。.tex}
 
 \end{document}
