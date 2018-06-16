@@ -4,6 +4,9 @@ src_dir=$1
 des_dir=$2
 
 function gen_dir {
+    if [[ $1 = 'img' ]]; then
+        return
+    fi
     for file in `ls $src_dir$1`; do
         echo 'Converting File:' $1'/'$file
         ./gen.py $src_dir$1'/'$file $des_dir$1

@@ -3,7 +3,6 @@
 import sys
 import os
 
-
 src_fp, des_dir = sys.argv[1:3]
 src_fn = os.path.basename(src_fp).strip()
 assert(len(src_fn.split('.')) >= 2)

@@ -1,10 +1,20 @@
 # Gleaning
 
+<!-- <img style="border:5px solid black"> -->
+
 A personal Chinese poetry collection.
 
-You can `make` it. **Note** that "texlive" and font family "FandolHei" and "楷体_GB2312" are needed.
-
+<img src="./src/img/fig_1.png" width="400"/> 
 
 《拾穗》， 是我的中文诗歌收集。
 
-你可以用`make`命令编译它，不过要先下载"texlive"以及字体"FandolHei"和 "楷体_GB2312"才行。
+你可以用`make`命令编译它，可能你需要一些字体支持。
+
+
+---
+
+<img src="./src/img/fig_3.png" width="400"/>
+
+---
+
+<img src="./src/img/fig_2.png" width="400"/>
