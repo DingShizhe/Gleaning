@@ -1,0 +1,65 @@
+\usepackage[
+    a5paper,
+    scale = 2.4,
+    left = 2cm,
+    right = 2cm,
+    top = 2cm,
+    bottom = 2.7cm
+] {geometry}
+
+
+\usepackage{titlesec}
+\titleformat{\chapter}{\centering\Huge\bfseries}{章\,\thechapter}{1em}{}
+\titleformat{\section}{\bf\LARGE}{x,\section\,y}{2em}{}
+
+
+\renewcommand{\contentsname}{\textbf{目录}}
+
+
+\usepackage[
+    CJKbookmarks = true,
+    bookmarks = true,
+    linktocpage = true,
+    hyperindex = true,
+    bookmarks = true,
+    pdfborderstyle={/S/U/W 0.5}% border style will be underline of width 1pt
+] {hyperref}
+%\newcommand{\htoday}{
+%    \href{https://github.com/DingShizhe}{\today}
+%}
+%\usepackage{draftwatermark}
+%\SetWatermarkText{\htoday}
+%\SetWatermarkLightness{0.97}
+
+
+\usepackage[svgnames]{xcolor}
+\definecolor{textgray}{rgb}{0.25,0.25,0.25}
+\color{textgray}
+
+
+% header style
+
+\usepackage{fancyhdr}
+
+\renewcommand{\headrulewidth}{0.0pt}
+\renewcommand{\footrulewidth}{0.0pt}
+
+\fancyfoot[CO,RE]{}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[ER]{\leftmark}
+\fancyhead[OL]{\rightmark}
+\fancyhead[EL,OR]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\fancypagestyle{plain}{%
+    \fancyhf{}
+    \fancyfoot[C]{\bfseries \thepage}
+    \renewcommand{\headrulewidth}{0pt}
+    \renewcommand{\footrulewidth}{0pt}
+}
+
+\usepackage{xeCJK}
+\setCJKmainfont[
+    ItalicFont={FandolKai},
+    BoldFont=方正大标宋_GBK
+]{华文中宋}

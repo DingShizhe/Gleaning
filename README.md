@@ -10,7 +10,6 @@ A personal Chinese poetry collection.
 你可以用`make`命令编译它，可能你需要一些字体支持。
 
 
-
 <img src="./img/f_3.png" width="400"/>
 
 

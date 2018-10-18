@@ -18,6 +18,7 @@ def _quote2tex(lines):
             state = 1
         elif state == 1:
             ret += '{%s}\n\n\\newpage' % (line)
+    ret.replace('\\\n\n', '\n\n')
     return ret
 
 def _verse2tex(lines):
@@ -44,6 +45,7 @@ def _verse2tex(lines):
         else:
             ret += '%s\\\\\n' % (line)
     ret += '\n\\newpage\n'
+    ret.replace('\\\n\n', '\n\n')
 
     return ret
 
