@@ -8,6 +8,14 @@
 ] {geometry}
 
 
+
+% 颜色
+\usepackage[svgnames]{xcolor}
+\definecolor{textgray}{rgb}{0.25,0.25,0.25}
+\definecolor{by}{rgb}{0.3,0.4,0.5}
+\color{textgray}
+
+
 % 章节格式
 \usepackage{titlesec}
 \titleformat{\chapter}{\centering\Huge\bfseries}{章\,\thechapter}{1em}{}
@@ -18,7 +26,7 @@
 
 % 脚注格式
 \usepackage[perpage]{footmisc}
-\renewcommand*{\thefootnote}{〔\arabic{footnote}〕}
+\renewcommand*{\thefootnote}{\textcolor{by}{〔\arabic{footnote}〕}}
 \setlength{\footnotemargin}{8mm}
 \setlength{\footnotesep}{\baselineskip}
 
@@ -37,13 +45,6 @@
 % \usepackage{draftwatermark}
 % \SetWatermarkText{\htoday}
 % \SetWatermarkLightness{0.97}
-
-
-% 颜色
-\usepackage[svgnames]{xcolor}
-\definecolor{textgray}{rgb}{0.25,0.25,0.25}
-\definecolor{by}{rgb}{0.3,0.4,0.5}
-\color{textgray}
 
 
 % 页面格式
