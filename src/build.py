@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 
-import sys
 import os
 import txt2tex
 
@@ -8,6 +7,9 @@ import txt2tex
 for item in os.listdir('.'):
     if os.path.isdir(item) and not item.startswith('__'):
         # print(item)
+        v = txt2tex.ToTex()
         for txt_file in os.listdir(item):
             # print(txt_file)
-            txt2tex.to_tex('%s/%s' % (item, txt_file))
+            v.clear_obj()
+            v.load_text('%s/%s' % (item, txt_file))
+            v.dump_tex()

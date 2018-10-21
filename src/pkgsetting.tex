@@ -8,14 +8,21 @@
 ] {geometry}
 
 
+% 章节格式
 \usepackage{titlesec}
 \titleformat{\chapter}{\centering\Huge\bfseries}{章\,\thechapter}{1em}{}
 \titleformat{\section}{\bf\LARGE}{x,\section\,y}{2em}{}
 
-
+% 目录格式
 \renewcommand{\contentsname}{\textbf{目录}}
 
+% 脚注格式
+\usepackage[perpage]{footmisc}
+\renewcommand*{\thefootnote}{〔\arabic{footnote}〕}
+\setlength{\footnotemargin}{8mm}
+\setlength{\footnotesep}{\baselineskip}
 
+% 水印及格式
 \usepackage[
     CJKbookmarks = true,
     bookmarks = true,
@@ -27,18 +34,19 @@
 \newcommand{\htoday}{
    \href{https://github.com/DingShizhe}{\today}
 }
-\usepackage{draftwatermark}
-\SetWatermarkText{\htoday}
-\SetWatermarkLightness{0.97}
+% \usepackage{draftwatermark}
+% \SetWatermarkText{\htoday}
+% \SetWatermarkLightness{0.97}
 
 
+% 颜色
 \usepackage[svgnames]{xcolor}
 \definecolor{textgray}{rgb}{0.25,0.25,0.25}
+\definecolor{by}{rgb}{0.3,0.4,0.5}
 \color{textgray}
 
 
-% header style
-
+% 页面格式
 \usepackage{fancyhdr}
 
 \renewcommand{\headrulewidth}{0.0pt}
@@ -58,8 +66,45 @@
     \renewcommand{\footrulewidth}{0pt}
 }
 
+
+% 字体
 \usepackage{xeCJK}
 \setCJKmainfont[
     ItalicFont={FandolKai},
     BoldFont=方正大标宋_GBK
 ]{华文中宋}
+
+\newCJKfontfamily\FangZhengSongYi{方正宋一_GBK}
+\newCJKfontfamily\FangZhengSongSan{方正宋三_GBK}
+\newCJKfontfamily\SongTi{宋体}
+\newCJKfontfamily\XinSongTi{新宋体}
+\newCJKfontfamily\FangZhengBaoSong{方正报宋_GBK}
+\newCJKfontfamily\WenDingPLJianBaoSong{文鼎ＰＬ简报宋}
+\newCJKfontfamily\WenDingPLShangHaiSong{文鼎ＰＬ細上海宋}
+\newCJKfontfamily\HuaWenSongTi{华文宋体}
+\newCJKfontfamily\FangZhengShuSong{方正书宋_GBK}
+
+\newCJKfontfamily\FangZhengDaBiaoSong{方正大标宋_GBK}
+\newCJKfontfamily\FangZhengXiaoBiaoSong{方正小标宋_GBK}
+\newCJKfontfamily\FangZhengCuSong{方正粗宋_GBK}
+\newCJKfontfamily\HuaWenZhongSong{华文中宋}
+\newCJKfontfamily\FangZhengFengYaSong{方正风雅宋简体}
+\newCJKfontfamily\FangZhengSongHei{方正宋黑_GBK}
+
+% \newCJKfontfamily\HanYiShuSongYiJian{HYShuSongYiJ}
+% \newCJKfontfamily\FangZhengCuJingDianSongTiJian{经典宋体简}
+
+\newCJKfontfamily\HuaWenFangSong{华文仿宋}
+\newCJKfontfamily\FangZhengFangSong{方正仿宋_GBK}
+
+
+\newCJKfontfamily\HuaWenXingKai{华文行楷}
+\newCJKfontfamily\FangZhengXingKai{方正行楷_GBK}
+% \newCJKfontfamily\JingDianFanMaoKai{经典繁毛楷}
+% \newCJKfontfamily\OTF{A\-OTF Outai Kaisho Std Light}
+\newCJKfontfamily\WenDingPLZhongKai{文鼎ＰＬ中楷}   % 缺字
+
+\newCJKfontfamily\HuaWenKaiTi{华文楷体}             % 可以
+\newCJKfontfamily\HanYiKaiTi{汉仪楷体S}
+\newCJKfontfamily\FangZhengKaiTi{方正楷体_GBK}
+\newCJKfontfamily\WenDingPLJianZhongKai{文鼎ＰＬ简中楷}
