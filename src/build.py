@@ -10,6 +10,7 @@ for item in os.listdir('.'):
         v = txt2tex.ToTex()
         for txt_file in os.listdir(item):
             # print(txt_file)
-            v.clear_obj()
+            v.load_text('%s/%s' % (item, txt_file))
+            v.dump_cooked()
             v.load_text('%s/%s' % (item, txt_file))
             v.dump_tex()

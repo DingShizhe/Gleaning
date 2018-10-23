@@ -42,9 +42,9 @@
 \newcommand{\htoday}{
    \href{https://github.com/DingShizhe}{\today}
 }
-% \usepackage{draftwatermark}
-% \SetWatermarkText{\htoday}
-% \SetWatermarkLightness{0.97}
+\usepackage{draftwatermark}
+\SetWatermarkText{\htoday}
+\SetWatermarkLightness{0.97}
 
 
 % 页面格式
@@ -71,41 +71,39 @@
 % 字体
 \usepackage{xeCJK}
 \setCJKmainfont[
-    ItalicFont={FandolKai},
-    BoldFont=方正大标宋_GBK
+    ItalicFont=华文楷体,
+    BoldFont=方正小标宋_GBK
 ]{华文中宋}
 
-\newCJKfontfamily\FangZhengSongYi{方正宋一_GBK}
-\newCJKfontfamily\FangZhengSongSan{方正宋三_GBK}
-\newCJKfontfamily\SongTi{宋体}
-\newCJKfontfamily\XinSongTi{新宋体}
-\newCJKfontfamily\FangZhengBaoSong{方正报宋_GBK}
-\newCJKfontfamily\WenDingPLJianBaoSong{文鼎ＰＬ简报宋}
-\newCJKfontfamily\WenDingPLShangHaiSong{文鼎ＰＬ細上海宋}
-\newCJKfontfamily\HuaWenSongTi{华文宋体}
-\newCJKfontfamily\FangZhengShuSong{方正书宋_GBK}
+\setCJKfallbackfamilyfont{\CJKfamilydefault}{
+    [ItalicFont=华文楷体]{宋体}
+}
 
-\newCJKfontfamily\FangZhengDaBiaoSong{方正大标宋_GBK}
-\newCJKfontfamily\FangZhengXiaoBiaoSong{方正小标宋_GBK}
-\newCJKfontfamily\FangZhengCuSong{方正粗宋_GBK}
-\newCJKfontfamily\HuaWenZhongSong{华文中宋}
-\newCJKfontfamily\FangZhengFengYaSong{方正风雅宋简体}
-\newCJKfontfamily\FangZhengSongHei{方正宋黑_GBK}
+\newCJKfontfamily\FangZhengSongYi{方正宋一_GBK}         % ok
+\newCJKfontfamily\FangZhengBaoSong{方正报宋_GBK}        % ok
+\newCJKfontfamily\FangZhengSongSan{方正宋三_GBK}        % 缺繁体
+\newCJKfontfamily\SongTi{宋体}                          % ok
+\newCJKfontfamily\XinSongTi{新宋体}                     % ok
+\newCJKfontfamily\HuaWenSongTi{华文宋体}                % ok
+\newCJKfontfamily\FangZhengShuSong{方正书宋_GBK}        % ok
 
-% \newCJKfontfamily\HanYiShuSongYiJian{HYShuSongYiJ}
-% \newCJKfontfamily\FangZhengCuJingDianSongTiJian{经典宋体简}
+\newCJKfontfamily\FangZhengDaBiaoSong{方正大标宋_GBK}   % 缺字
+\newCJKfontfamily\FangZhengXiaoBiaoSong{方正小标宋_GBK} % ok
+\newCJKfontfamily\FangZhengCuSong{方正粗宋_GBK}         % 缺字
+\newCJKfontfamily\HuaWenZhongSong{华文中宋}             % ok
+\newCJKfontfamily\FangZhengFengYaSong{方正风雅宋简体}    % 缺繁体
+\newCJKfontfamily\FangZhengSongHei{方正宋黑_GBK}        % 缺繁体
 
-\newCJKfontfamily\HuaWenFangSong{华文仿宋}
-\newCJKfontfamily\FangZhengFangSong{方正仿宋_GBK}
+\newCJKfontfamily\HuaWenFangSong{华文仿宋}              % ok
+\newCJKfontfamily\FangZhengFangSong{方正仿宋_GBK}       % ok
 
-
-\newCJKfontfamily\HuaWenXingKai{华文行楷}
-\newCJKfontfamily\FangZhengXingKai{方正行楷_GBK}
-% \newCJKfontfamily\JingDianFanMaoKai{经典繁毛楷}
-% \newCJKfontfamily\OTF{A\-OTF Outai Kaisho Std Light}
-\newCJKfontfamily\WenDingPLZhongKai{文鼎ＰＬ中楷}   % 缺字
-
-\newCJKfontfamily\HuaWenKaiTi{华文楷体}             % 可以
+\newCJKfontfamily\HuaWenKaiTi{华文楷体}                 % ok
 \newCJKfontfamily\HanYiKaiTi{汉仪楷体S}
 \newCJKfontfamily\FangZhengKaiTi{方正楷体_GBK}
-\newCJKfontfamily\WenDingPLJianZhongKai{文鼎ＰＬ简中楷}
+
+\newCJKfontfamily\FandolKai{FandolKai}
+\newCJKfontfamily\FandolFang{FandolFang}
+\newCJKfontfamily\FandolSong{FandolSong}
+\newCJKfontfamily\FandolHei{FandolHei}
+% \newCJKfontfamily\FandolSongBold{FandolSong}
+% \newCJKfontfamily\FandolHeiBold{FandolHei}
