@@ -107,7 +107,7 @@ class ToTex(object):
         parts[0] = '\\section[{\\color{by}\\HuaWenKaiTi{%s}}~~%s]{%s}' \
             % (author, title, parts[0])
         parts[1] = '%s\\\\\n' % parts[1]
-        parts[2:] = ['\\vspace{-0.4cm}%s\\\\'%p for p in parts[2:]]
+        parts[2:] = ['\\vspace{-0.4cm}%s\\\\'%p.replace('\n', '\\\\\n') for p in parts[2:]]
         parts = ['\\phantom{anything}\n'] + parts
 
         content =  '\n\n'.join(parts) + '\n\\newpage'

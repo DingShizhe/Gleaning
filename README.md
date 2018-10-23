@@ -13,4 +13,4 @@ A personal Chinese poetry collection.
 <img src="./img/f_3.png" width="400"/>
 
 
-<img src="./img/f_2.png" width="400"/>
+<!-- <img src="./img/f_2.png" width="400"/> -->
