@@ -11,6 +11,7 @@ for item in os.listdir('.'):
         for txt_file in os.listdir(item):
             # print(txt_file)
             v.load_text('%s/%s' % (item, txt_file))
-            v.dump_cooked()
+            # v.dump_cooked()
+            v.dump_raw()
             v.load_text('%s/%s' % (item, txt_file))
             v.dump_tex()

@@ -102,13 +102,28 @@ class ToTex(object):
         tmp = author_line.split('~')
         author, times = tmp[0], '' if len(tmp) == 1 else tmp[1]
 
+        # 脚注
         parts = [p.replace('{', '\\footnote{') for p in raw_parts]
 
-        parts[0] = '\\section[{\\color{by}\\HuaWenKaiTi{%s}}~~%s]{%s}' \
+        # 题目 作者
+        parts[0] = '\\begin{section}[{\\color{by}\\HuaWenKaiTi{%s}}~~%s]{%s}' \
             % (author, title, parts[0])
         parts[1] = '%s\\\\\n' % parts[1]
-        parts[2:] = ['\\vspace{-0.4cm}%s\\\\'%p.replace('\n', '\\\\\n') for p in parts[2:]]
+        parts[2:] = ['\\vspace{-0.45cm}%s\\\\'%p.replace('\n', '\\\\\n') for p in parts[2:]]
         parts = ['\\phantom{anything}\n'] + parts
+        parts += ['\\end{section}']
+
+        # 跋 XXX
+        fst_par = 3
+        if '(' in parts[3]:
+            parts[3] = parts[3].replace('(', '\n\\begin{spacing}{1.2}\n\\textit{')
+            parts[3] = parts[3].replace(')', '}\\\\\\\n\\end{spacing}')
+            parts[3] = parts[3].rstrip('\\\\')
+            parts[4].replace('vspace{-0.45cm}', 'vspace{-0.6cm}')
+            fst_par = 4
+
+        if '\n' in parts[fst_par]: parts[0] += '\\setlength{\\parindent}{0pt}\n'
+        else: parts[0] += '\\setlength{\\parindent}{15pt}\n'
 
         content =  '\n\n'.join(parts) + '\n\\newpage'
         return content
@@ -162,12 +177,12 @@ test_string = """望月懷遠
 不堪盈手[6]贈，還寢夢佳期。
 
 --------
-[1] 張九齡（678-740）：唐開元尚書丞相，詩人。字子壽，一名博物，漢族，韶州曲江（今廣東韶關市）人。長安年間進士。官至中書侍郎同中書門下平章事。後罷相，爲荊州長史。詩風清淡。他忠耿盡職，秉公守則，直言敢諫，選賢任能，不徇私枉法，不趨炎附勢，敢與惡勢力作鬥爭，爲“開元之治”作出了積極貢獻。他的五言古詩，以素練質樸的語言，寄託深遠的人生慨望，對掃除唐初所沿習的六朝綺靡詩風，貢獻尤大。譽爲“嶺南第一人”。
-[2] 謝莊《月賦》：“隔千里兮共明月”。
+[1] 張九齡（678-740）：唐開元尚書丞相，詩人。字子壽，一名博物，漢族，韶州曲江（今廣東韶關市）人。長安年間進士。官至中書侍郎同中書門下平章事。後罷相，爲荊州長史。詩風清淡。他忠耿盡職，秉公守則，直言敢諫，選賢任能，不徇私枉法，不趨炎附勢，敢與惡勢力作鬥爭，爲『開元之治』作出了積極貢獻。他的五言古詩，以素練質樸的語言，寄託深遠的人生慨望，對掃除唐初所沿習的六朝綺靡詩風，貢獻尤大。譽爲『嶺南第一人』。
+[2] 謝莊《月賦》：『隔千里兮共明月』。
 [3] 竟夕，終宵，即一整夜。
 [4] 憐，愛。
 [5] 光，這裏是月光。
-[6] 盈手，雙手捧滿之意。陸機《擬明月何皎皎》：“照之有餘輝，攬之不盈手。”"""
+[6] 盈手，雙手捧滿之意。陸機《擬明月何皎皎》：『照之有餘輝，攬之不盈手。』"""
 
 v._parse_cooked(test_string)
 '''

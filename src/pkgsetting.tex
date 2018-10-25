@@ -19,7 +19,7 @@
 % 章节格式
 \usepackage{titlesec}
 \titleformat{\chapter}{\centering\Huge\bfseries}{章\,\thechapter}{1em}{}
-\titleformat{\section}{\bf\LARGE}{x,\section\,y}{2em}{}
+\titleformat{\section}{\bf\Large}{x,\section\,y}{2em}{}
 
 % 目录格式
 \renewcommand{\contentsname}{\textbf{目录}}
@@ -29,6 +29,10 @@
 \renewcommand*{\thefootnote}{\textcolor{by}{〔\arabic{footnote}〕}}
 \setlength{\footnotemargin}{8mm}
 \setlength{\footnotesep}{\baselineskip}
+\setlength{\footnotesep}{13pt}
+% \setlength{\skip\footins}{24pt plus 3pt minus 3pt} 
+
+\usepackage{setspace}
 
 % 水印及格式
 \usepackage[
@@ -74,10 +78,6 @@
     ItalicFont=华文楷体,
     BoldFont=方正小标宋_GBK
 ]{华文中宋}
-
-\setCJKfallbackfamilyfont{\CJKfamilydefault}{
-    [ItalicFont=华文楷体]{宋体}
-}
 
 \newCJKfontfamily\FangZhengSongYi{方正宋一_GBK}         % ok
 \newCJKfontfamily\FangZhengBaoSong{方正报宋_GBK}        % ok
