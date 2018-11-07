@@ -15,8 +15,9 @@ class ToTex(object):
              |
             TeX
     """
-    def __init__(self):
+    def __init__(self, jianti=False):
         """Constructor for ToTex"""
+        self.jianti = jianti
         self.src_path = ''
 
         self.raw_parts = []
@@ -32,7 +33,11 @@ class ToTex(object):
         self.src_path = text_file
         with open(text_file, 'r') as f:
             text = f.read()
-        
+
+        if self.jianti:
+            import opencc
+            text = opencc.convert(text, config='t2s.json')
+
         if '--------' in text:
             self._parse_cooked(text)
         else:
